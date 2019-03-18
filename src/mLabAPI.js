@@ -67,9 +67,7 @@ export function formmatedData(data, section) {
       resultObj[month][type] = Array(monthDays);
       resultObj[month][type].fill(0);
     }
-    resultObj[month][type][day-1] += parseInt(d.money);
+    resultObj[month][type][day-1] += Math.round(d.money);
   }
-  console.log(data);
-  console.log(resultObj);
   return resultObj;
 }

@@ -44,11 +44,9 @@ class IncomeTable extends Component {
       getIncomeData(this.state.apiToken, (function(res) {this.setState({"income": res})}).bind(this));
       getExpenditureData(this.state.apiToken, (function(res) {this.setState({"expenditure": res})}).bind(this));
     }
-
   }
   
   uploadIncomeData() {
-    this.getData();
     var today = new Date();
     var year = today.getFullYear();
     var month = today.getMonth() + 1;
@@ -74,7 +72,6 @@ class IncomeTable extends Component {
   }
   
   uploadExpenditureData() {
-    this.getData();
     var today = new Date();
     var year = today.getFullYear();
     var month = today.getMonth() + 1;
