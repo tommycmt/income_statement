@@ -12,8 +12,11 @@ import { getIncomeData, getExpenditureData, formmatedData, uploadToDB} from './m
 class IncomeTable extends Component {
   constructor(props) {
     super(props);
-    this.state = { "month": 1,
-                   "monthDays": 31,
+    var today = new Date();
+    var month = today.getMonth() + 1;
+    var monthDays = computeMonthDays(month);
+    this.state = { "month": month,
+                   "monthDays": monthDays,
                    "apiToken": "",
                    "income": formmatedData({}),
                    "expenditure": formmatedData({}),
