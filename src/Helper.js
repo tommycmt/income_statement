@@ -25,9 +25,11 @@ export function pad(num, size) {
 var CryptoJS = require("crypto-js"); 
 
 
-export function decryptToken() {
+export function decryptToken(passphrase) {
   var ciphertext = "U2FsdGVkX1/Iwss9Q1fUC8y9qgLSYRvFREi0Fx7SSCErxUBXh/9lo5+z7gyItljTI37XbYadyZ//B3KI6wJAig==";
-  var passphrase = prompt("Passphrase:");
+  if (passphrase === undefined) {
+    passphrase = prompt("Passphrase:");
+  }
   try {
     var bytes  = CryptoJS.AES.decrypt(ciphertext, passphrase);
     var originalText = bytes.toString(CryptoJS.enc.Utf8);

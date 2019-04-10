@@ -15,11 +15,24 @@ class IncomeTable extends Component {
     var today = new Date();
     var month = today.getMonth() + 1;
     var monthDays = computeMonthDays(month);
+    var token = "";
+    var income = formmatedData({});
+    var expenditure = formmatedData({});
+    var decoded = decodeURIComponent(document.location.search.substr(1));
+    var qs = decoded.split("&");
+    for (var index in qs) {
+        var params = qs[index].split("=");
+        if (params[0] == "passphrase") {
+          token = decryptToken(params[1]);
+          getIncomeData(token, function(res) {income = res;});
+          getExpenditureData(token, function(res) {expenditure = res;}) 
+        }
+    }
     this.state = { "month": month,
                    "monthDays": monthDays,
-                   "apiToken": "",
-                   "income": formmatedData({}),
-                   "expenditure": formmatedData({}),
+                   "apiToken": token,
+                   "income": income,
+                   "expenditure": expenditure,
     };
   }
   
