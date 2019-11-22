@@ -11,7 +11,7 @@ export function getIncomeData(token, callback) {
         callback(formmatedData(JSON.parse(this.responseText), "income"));
       }
   };
-  xhr.open("GET", 'https://api.mlab.com/api/1/databases/income/collections/income?q={"income": {"$exists":true}, "date": {"$gte": "' + startTime +'", "$lt": "' + endTime + '"}}&apiKey=' + token, true);
+  xhr.open("GET", 'https://api.mlab.com/api/1/databases/income/collections/income?q={"income": {"$exists":true}, "date": {"$gte": "' + startTime +'", "$lt": "' + endTime + '"}}&s={"date":-1}&apiKey=' + token, true);
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.send();
 }
@@ -27,7 +27,7 @@ export function getExpenditureData(token, callback) {
         callback(formmatedData(JSON.parse(this.responseText), "expenditure"));
       }
   };
-  xhr.open("GET", 'https://api.mlab.com/api/1/databases/income/collections/income?q={"expenditure": {"$exists":true}, "date": {"$gte": "' + startTime +'", "$lt": "' + endTime + '"}}&apiKey=' + token, true);
+  xhr.open("GET", 'https://api.mlab.com/api/1/databases/income/collections/income?q={"expenditure": {"$exists":true}, "date": {"$gte": "' + startTime +'", "$lt": "' + endTime + '"}}&s={"date":-1}&apiKey=' + token, true);
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.send();
 }
