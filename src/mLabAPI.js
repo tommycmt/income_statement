@@ -2,7 +2,7 @@ import { computeMonthDays } from './Helper.js'
 
 export function getIncomeData(token, callback) {
   var year = new Date().getFullYear();
-  var startTime = new Date(year, 0).toISOString();
+  var startTime = new Date(year - 1, 0).toISOString();
   var endTime = new Date(year + 1, 0).toISOString();
   
   var xhr = new XMLHttpRequest();
@@ -18,7 +18,7 @@ export function getIncomeData(token, callback) {
 
 export function getExpenditureData(token, callback) {
   var year = new Date().getFullYear();
-  var startTime = new Date(year, 0).toISOString();
+  var startTime = new Date(year - 1, 0).toISOString();
   var endTime = new Date(year + 1, 0).toISOString();
   
   var xhr = new XMLHttpRequest();
