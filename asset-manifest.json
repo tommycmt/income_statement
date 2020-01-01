@@ -1,13 +1,13 @@
 {
   "main.css": "/income_statement/static/css/main.413ea1b5.chunk.css",
-  "main.js": "/income_statement/static/js/main.f7eee63a.chunk.js",
-  "main.js.map": "/income_statement/static/js/main.f7eee63a.chunk.js.map",
+  "main.js": "/income_statement/static/js/main.7d987af8.chunk.js",
+  "main.js.map": "/income_statement/static/js/main.7d987af8.chunk.js.map",
   "runtime~main.js": "/income_statement/static/js/runtime~main.882f983e.js",
   "runtime~main.js.map": "/income_statement/static/js/runtime~main.882f983e.js.map",
   "static/js/2.edb08b1a.chunk.js": "/income_statement/static/js/2.edb08b1a.chunk.js",
   "static/js/2.edb08b1a.chunk.js.map": "/income_statement/static/js/2.edb08b1a.chunk.js.map",
   "index.html": "/income_statement/index.html",
-  "precache-manifest.780f1f6798172eb4ffc8b06b44b687dc.js": "/income_statement/precache-manifest.780f1f6798172eb4ffc8b06b44b687dc.js",
+  "precache-manifest.ba66a0b242a4ed0a50281485214ff342.js": "/income_statement/precache-manifest.ba66a0b242a4ed0a50281485214ff342.js",
   "service-worker.js": "/income_statement/service-worker.js",
   "static/css/main.413ea1b5.chunk.css.map": "/income_statement/static/css/main.413ea1b5.chunk.css.map"
 }
