@@ -4,8 +4,8 @@ export function getIncomeData(token, callback) {
   var year = new Date().getFullYear();
   var month = new Date().getMonth();
   var startyear = month == 11? year : year - 1;
-  
-  var startTime = new Date(startyear, (month + 1) % 12 - 1).toISOString();
+   
+  var startTime = new Date(startyear, (month + 1) % 12).toISOString();
   var endTime = new Date(year + 1, 0).toISOString();
   
   var xhr = new XMLHttpRequest();
@@ -24,7 +24,7 @@ export function getExpenditureData(token, callback) {
   var month = new Date().getMonth();
   var startyear = month == 11? year : year - 1;
   
-  var startTime = new Date(startyear, (month + 1) % 12 - 1).toISOString();
+  var startTime = new Date(startyear, (month + 1) % 12).toISOString();
   var endTime = new Date(year + 1, 0).toISOString();
   
   var xhr = new XMLHttpRequest();
